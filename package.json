@@ -1,0 +1,23 @@
+{
+  "name": "adspack",
+  "version": "1.0.0",
+  "description": "基于webpack的单页/多页打包工具脚手架",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "adspack": "node ./bin/adspack.js"
+  },
+  "keywords": [
+    "webpack",
+    "单页/多页"
+  ],
+  "bin": {
+    "adspack": "./bin/adspack.js"
+  },
+  "author": "Shanshan Wei",
+  "license": "ISC",
+  "dependencies": {
+    "commander": "^2.11.0"
+  },
+  "devDependencies": {}
+}
