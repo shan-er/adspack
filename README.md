@@ -18,5 +18,5 @@
 1. 新建项目文件夹：如test，输入一下命令
 	`mkdir test && cd test`
 2. 生成，默认是基于vue的单页面应用
-	`adspack init` 
-	如若生成多页面应用，加参数 -m，即输入命令`adspack init -m`
+	`adspack g` 
+	如若生成多页面应用，加参数 -m，即输入命令`adspack g -m`
