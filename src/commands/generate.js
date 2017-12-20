@@ -58,7 +58,7 @@ let generate = function(options) {
                 })
                 .then(function() {
                     logSuccess('安装相关项目依赖完成');
-                    logSuccess('单页面应用项目创建成功！');
+                    logSuccess(`${currentType}页面应用项目创建成功！`);
                 });
 
             rl.close();
@@ -72,14 +72,14 @@ let generate = function(options) {
  * 拷贝项目结构
  */
 function createTmpl() {
+    let indexPath = sysPath.resolve(initTmplPath, './index.html');
+    fs.existsSync(indexPath) ? fs.copySync(indexPath, sysPath.resolve(cwd, './index.html')) : '';
 
-    fs.copySync(sysPath.resolve(initTmplPath, './index.html'), sysPath.resolve(cwd, './index.html'));
     fs.copySync(sysPath.resolve(initTmplPath, './README.md'), sysPath.resolve(cwd, './README.md'));
     fs.copySync(sysPath.resolve(initTmplPath, './.babelrc'), sysPath.resolve(cwd, './.babelrc'));
     fs.copySync(sysPath.resolve(initTmplPath, './.eslintrc.js'), sysPath.resolve(cwd, './.eslintrc.js'));
     fs.copySync(sysPath.resolve(initTmplPath, './src'), sysPath.resolve(cwd, './src'));
     fs.copySync(sysPath.resolve(initTmplPath, './build'), sysPath.resolve(cwd, './build'));
-
 }
 
 /**

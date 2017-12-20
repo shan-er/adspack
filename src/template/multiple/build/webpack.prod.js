@@ -11,7 +11,10 @@ var path = require('path');
 var prodConf = merge(config, {
     devtool: '#nosources-source-map',
     output: {
-        publicPath: ''
+        filename: '[name].[chunkhash:8].bundle.js',
+        chunkFilename: '[name].[chunkhash:8].js',
+        path: path.resolve(__dirname, '../dist/js/'),
+        publicPath: './js/'
     },
     plugins: [
         new webpack.DefinePlugin({
